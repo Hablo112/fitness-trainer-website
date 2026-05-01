@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --secondary-accent-color: #0c0c0c;
+  --main-text-color: #464c5c;
+  --main-bg-color: #ffffff;
+  scroll-behavior: smooth;
+  font-family: "Heebo", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.header {
+  max-width: 1200px;
+  margin: auto;
+}

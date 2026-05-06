@@ -18,7 +18,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url("../img/services/bg-services.jpg") center/cover no-repeat;
+    background: url("../img/service/bg-service.jpg") center / cover no-repeat;
     filter: brightness(0.35);
     z-index: 0;
   }

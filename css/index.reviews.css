@@ -1,0 +1,101 @@
+.reviews {
+  padding: 6rem 0;
+  background: url("../img/about/bg-about.jpg") center/cover no-repeat;
+
+  & .reviews__header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    .section-label {
+      font:
+        normal 300 0.9rem "Rubik Dirt",
+        system-ui;
+      color: var(--bg-dark);
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font:
+        normal 700 1.75rem "Rubik Dirt",
+      system-ui;
+      color: var(--bg-dark);
+    }
+  }
+
+  & .reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  & .review-card {
+    background: var(--dark-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    position: relative;
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -0.5rem;
+      left: 1.5rem;
+      font-family: Georgia, serif;
+      font-size: 5rem;
+      color: var(--yellow);
+      line-height: 1;
+      opacity: 0.4;
+    }
+  }
+
+  & .review-card__text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  & .review-card__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  & .review-card__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--dark);
+    flex-shrink: 0;
+  }
+
+  & .review-card__name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  & .review-card__stars {
+    color: var(--yellow);
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+  }
+  & .review-card__badge {
+    
+    top: -0.5rem;
+    right: -0.5rem;
+    width: 50px;
+    height: 50px;
+    
+  }
+}

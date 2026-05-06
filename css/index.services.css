@@ -1,0 +1,100 @@
+.services {
+  position: relative;
+  width: 100%;
+  /* max-width: 480px; */
+  min-height: 60vh;
+  padding: 2.5rem 1.75rem 3rem;
+  overflow: hidden;
+
+  .services__background {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    padding: 2.5rem 1.75rem 3rem;
+  }
+
+  /* фонове фото */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/services/bg-services.jpg") center/cover no-repeat;
+    filter: brightness(0.35);
+    z-index: 0;
+  }
+
+  /* темний оверлей зверху */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    z-index: 1;
+  }
+
+  /* весь контент поверх псевдо-елементів */
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  & .services__eyebrow {
+    font-family: "Rubik Dirt", system-ui;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--accent-yellow);
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  & .services__title {
+    font-family: "Rubik", system-ui;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.85rem;
+  }
+
+  & .services__intro {
+    font-family: "Rubik", system-ui;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  /* список послуг */
+  & .services__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  & .services__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-family: "Rubik", system-ui;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--accent-yellow);
+    line-height: 1.4;
+  }
+
+  & .services__check {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+  }
+}

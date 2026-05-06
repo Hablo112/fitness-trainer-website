@@ -1,53 +1,58 @@
 .about {
-  background-image: url("../img/about/about-fhon.jpg");
-  background-size: cover;
-  background-position: center;
+  position: relative;
   padding: 1rem;
 
-  .about__header {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/about/about-fhon.jpg") no-repeat center / cover;
+    filter: brightness(0.15) grayscale(1);
+    z-index: 0;
+  }
+
+  & .about__header {
+    position: relative; /* ← додай */
+    z-index: 1; /* ← додай */
     text-align: center;
-    .about__title {
+
+    & .about__title {
       font:
         normal 400 2rem "Rubik Dirt",
         system-ui;
-      color: var(--secondary-accent-color);
-      text-align: center;
-      align-items: center;
+      color: var(--main-bg-color);
       padding: 4rem 0 2rem;
     }
-    .about__divider {
+
+    & .about__divider {
       width: 100px;
       height: 4px;
       background-color: var(--accent-yellow);
       margin: 20px auto;
     }
   }
-  .about__card {
-    position: relative;
 
-    .about__card-label {
+  & .about__card {
+    position: relative; /* вже є — добре */
+    z-index: 1; /* ← додай */
+
+    & .about__card-label {
       position: absolute;
-
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-
       width: 80%;
       max-width: 700px;
-
       color: var(--main-bg-color);
-
       text-align: center;
-
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-
       font-size: 1rem;
       line-height: 1.5;
     }
 
-    .about__card-image {
+    & .about__card-image {
       border-radius: 10px;
       width: 100%;
       max-width: 900px;

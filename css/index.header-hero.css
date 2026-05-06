@@ -93,13 +93,14 @@
   background-image: url("../img/header/bg-header.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;  
+  background-position: center;
   min-height: 100vh;
 
   /* .header__wrapper */
   & .header__wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   /* .header__logo */
@@ -110,7 +111,9 @@
 
   /* .header__menu */
   & .header__menu-link {
-    font: normal 400 1rem "Rubik Dirt", system-ui;
+    font:
+      normal 400 1rem "Rubik Dirt",
+      system-ui;
     color: var(--main-bg-color);
     margin-inline-start: 2rem;
 
@@ -125,6 +128,7 @@
     display: flex;
     align-items: center;
     margin-inline-start: auto;
+    
   }
 
   & .header__logo-contact {
@@ -156,14 +160,18 @@
   padding: 2rem 0;
 
   & .hero__title {
-    font: normal 300 2rem "Rubik Dirt", system-ui;
+    font:
+      normal 300 2rem "Rubik Dirt",
+      system-ui;
     color: var(--main-bg-color);
     letter-spacing: 2px;
     margin-bottom: 6rem;
   }
 
   & .hero__subtitle {
-    font: normal 300 1rem "Rubik Dirt", system-ui;
+    font:
+      normal 300 1rem "Rubik Dirt",
+      system-ui;
     color: var(--main-bg-color);
     letter-spacing: 1px;
     padding-top: 150px;
@@ -171,7 +179,9 @@
   }
 
   & .hero__button {
-    font: normal 200 1rem "Rubik Dirt", system-ui;
+    font:
+      normal 200 1rem "Rubik Dirt",
+      system-ui;
     background-color: var(--accent-yellow);
     color: var(--secondary-accent-color);
     margin-top: 1rem;
@@ -185,7 +195,9 @@
    ============================== */
 .yellow {
   color: var(--accent-yellow);
-  font: 600 3rem "Chela One", system-ui;
+  font:
+    600 3rem "Chela One",
+    system-ui;
   letter-spacing: 3px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }

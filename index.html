@@ -14,6 +14,24 @@
         data-hx-get="global.header.partial.html"
       ></nav>
     </header>
+    <main class="main">
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.about.me.partial.html"
+      ></section>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.coach.info.partial.html"
+      ></section>
+    </main>
+    <footer
+      class="footer"
+      data-hx-trigger="load"
+      data-hx-swap="outerHTML"
+      data-hx-get="global.footer.partial.html"
+    ></footer>
     <script src="https://unpkg.com/htmx.org@2.0.4"></script>
   </body>
 </html>

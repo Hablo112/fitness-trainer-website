@@ -1,0 +1,61 @@
+.about {
+  background-image: url("../img/about/about-fhon.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 1rem;
+
+  .about__header {
+    text-align: center;
+    .about__title {
+      font:
+        normal 400 2rem "Rubik Dirt",
+        system-ui;
+      color: var(--secondary-accent-color);
+      text-align: center;
+      align-items: center;
+      padding: 4rem 0 2rem;
+    }
+    .about__divider {
+      width: 100px;
+      height: 4px;
+      background-color: var(--accent-yellow);
+      margin: 20px auto;
+    }
+  }
+  .about__card {
+    position: relative;
+
+    .about__card-label {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 80%;
+      max-width: 700px;
+
+      color: var(--main-bg-color);
+
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .about__card-image {
+      border-radius: 10px;
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      margin: auto;
+      display: block;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}

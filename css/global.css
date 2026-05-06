@@ -10,11 +10,14 @@
 }
 
 :root {
-  --secondary-accent-color: #0c0c0c;
-  --main-text-color: #464c5c;
   --main-bg-color: #ffffff;
+  --secondary-accent-color: #1a1a1a;
+  --accent-yellow: #e6cf39;
   scroll-behavior: smooth;
   font-family: sans-serif;
+  --bg-dark: #1a1a1a;
+  --text-light: #ffffff;
+  --text-muted: #cccccc;
 }
 
 img {

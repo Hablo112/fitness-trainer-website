@@ -104,15 +104,15 @@
   }
 }
 
-
 & .navbar-collapse {
   @media (max-width: 991px) {
     position: absolute;
     top: 70px;
     right: 1rem;
     width: 220px;
-    background: rgba(145, 49, 49, 0.97);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    border: 1px solid rgba(143, 137, 137, 0.1);
     border-radius: 10px;
     padding: 0.5rem 0;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);

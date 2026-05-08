@@ -1,64 +1,79 @@
-<div class="header">
-  <section class="header-nav">
-    <div class="header__wrapper container">
-      <div class="header__logo">
-        <img
-          class="header__logo-image"
-          src="img/header/logo-header.png"
-          alt="Karina Khablo logo"
-        />
-      </div>
-
-      <nav class="header__menu">
-        <a class="header__menu-link" href="#about">Про Мене</a>
-        <a class="header__menu-link" href="#services">Послуги</a>
-        <a class="header__menu-link" href="#reviews">Відгуки</a>
-        <a class="header__menu-link" href="#">Результати</a>
-        <a class="header__menu-link" href="#contacts">Контакти</a>
-      </nav>
-    </div>
-  </section>
-  <div class="header__contact container">
-    <a
-      href="https://www.instagram.com/khablo_karina/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+<section class="header-nav">
+  <div class="header__wrapper container">
+    <div class="header__logo">
       <img
-        class="header__logo-contact"
-        src="img/header/logo-inst.png"
-        alt="Instagram logo"
+        class="header__logo-image"
+        src="img/header/logo-header.png"
+        alt="Karina Khablo logo"
       />
-    </a>
-    <a
-      href="https://t.me/khablo_karina"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <button
+        class="navbar-toggler header__burger"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#headerNav"
+        aria-controls="headerNav"
+        aria-expanded="false"
+        aria-label="Меню"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="headerNav">
+        <ul class="navbar-nav header__menu ms-auto">
+          <li class="nav-item">
+            <a class="nav-link header__menu-link" href="#about">Про Мене</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link header__menu-link" href="#services">Послуги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link header__menu-link" href="#reviews">Відгуки</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link header__menu-link" href="#contacts">Контакти</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+<div class="header__contact container">
+  <a
+    href="https://www.instagram.com/khablo_karina/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      class="header__logo-contact"
+      src="img/header/logo-inst.png"
+      alt="Instagram logo"
+    />
+  </a>
+  <a
+    href="https://t.me/khablo_karina"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
       class="header__logo-contact"
       src="img/header/logo-telegram.png"
       alt="Telegram logo"
-      />
-    </a>
-  </div>
-
-  <hr class="divider" />
-  <section class="hero">
-    <div class="hero__content container">
-      <h1 class="hero__title">
-        <span class="yellow">Ласкаво прошу</span>
-        <br />
-        На сторіку твого персонального фітнес-тренера Каріни Хабло!
-      </h1>
-      <div class="hero__subtitle">
-        <!-- <p>Тут ти знайдеш все необхідне для досягнення своїх фітнес-цілей.</p> -->
-        <p class="hero__description">
-          Я допоможу тобі досягти твоїх фітнес-цілей та покращити своє здоров'я
-          за допомогою індивідуальних тренувальних програм та підтримки.
-        </p>
-        <button class="hero__button">Дізнатися більше</button>
-      </div>
-    </div>
-  </section>
+    />
+  </a>
 </div>
+
+<hr class="divider" />
+<section class="hero">
+  <div class="hero__content container">
+    <h1 class="hero__title">
+      <span class="yellow">Ласкаво прошу</span>
+      <br />
+      На сторіку твого персонального фітнес-тренера Каріни Хабло!
+    </h1>
+    <div class="hero__subtitle">
+      <button class="hero__button">Дізнатися більше</button>
+    </div>
+  </div>
+</section>

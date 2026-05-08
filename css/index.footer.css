@@ -1,6 +1,6 @@
 .contacts {
   background-color: var(--accent-yellow);
-  background-image: url("../img/footer/bg-contacts.png");
+  /* background-image: url("../img/footer/bg-contacts.png"); */
   background-size: cover;
   background-position: center;
   width: 100%;

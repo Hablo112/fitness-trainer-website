@@ -1,94 +1,3 @@
-/* .header__logo-image {
-  width: 150px;
-  height: auto;
-}
-
-
-.header {
-  
-  background-image: url("../img/header/bg-header.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-}
-
-.header__wrapper {
-  display: flex;
-
-}
-.header__menu-link {
-  font-size: 1rem;
-  color: var(--main-bg-color);
-  font-family: "Rubik Dirt";
-  font-weight: 400;
-  font-style: normal;
-  margin-left: 2rem;
-
-}
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 0;
-}
-.hero__title {
-  font-size: 2rem;
-  color: var(--main-bg-color);
-  margin-bottom: 6rem;  
-  font-family: "Rubik Dirt", system-ui;
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: 2px;
-}
-
-.yellow {
-  color: #e6cf39;
-  font-family: "Chela One";
-  font-size: 48px;
-  letter-spacing: 3px;
-  font-weight: 600;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-
-.header__contact {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.header__logo-contact {
-  width: 30px;
-  height: auto;
-  margin-left: 20px;
-}
-.divider {
-  border: none;
-  height: 1px;
-  background-color: var(--main-bg-color);
-  margin-top: 1rem;
-}
-.hero__subtitle {
-  font-size: 1rem;
-  color: var(--main-bg-color);
-  margin-bottom: 2rem;  
-  font-family: "Rubik Dirt", system-ui;
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: 1px;
-  padding-top: 150px;
-}
-.hero__button {
-  font-size: 1rem;
-  background-color: #f7e03c;
-  color: var(--secondary-accent-color);
-  font-family: "Rubik Dirt", system-ui;
-  font-weight: 200;
-  margin-top: 1rem;
-} */
-
 .header {
   background-image: url("../img/header/bg-header.png");
   background-repeat: no-repeat;
@@ -96,39 +5,22 @@
   background-position: center;
   min-height: 100vh;
 
-  /* .header__wrapper */
   & .header__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
-  /* .header__logo */
   & .header__logo-image {
     width: 150px;
     height: auto;
   }
 
-  /* .header__menu */
-  & .header__menu-link {
-    font:
-      normal 400 1rem "Rubik Dirt",
-      system-ui;
-    color: var(--main-bg-color);
-    margin-inline-start: 2rem;
-
-    &:hover {
-      color: var(--accent-yellow);
-      transition: color 0.2s ease;
-    }
-  }
-
-  /* .header__contact */
   & .header__contact {
     display: flex;
     align-items: center;
     margin-inline-start: auto;
-    
   }
 
   & .header__logo-contact {
@@ -138,9 +30,6 @@
   }
 }
 
-/* ==============================
-   .divider
-   ============================== */
 .divider {
   border: none;
   height: 1px;
@@ -148,9 +37,6 @@
   margin-top: 1rem;
 }
 
-/* ==============================
-   .hero — з вкладеністю
-   ============================== */
 .hero {
   display: flex;
   flex-direction: column;
@@ -190,9 +76,6 @@
   }
 }
 
-/* ==============================
-   .yellow — акцентний текст
-   ============================== */
 .yellow {
   color: var(--accent-yellow);
   font:
@@ -200,4 +83,58 @@
     system-ui;
   letter-spacing: 3px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+& .navbar {
+  padding: 0;
+  background: transparent !important;
+}
+
+& .header__burger {
+  border: 1.5px solid var(--main-bg-color);
+  border-radius: 6px;
+  padding: 0.4rem 0.7rem;
+
+  & .navbar-toggler-icon {
+    filter: invert(1);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--accent-yellow);
+  }
+}
+
+
+& .navbar-collapse {
+  @media (max-width: 991px) {
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    width: 220px;
+    background: rgba(145, 49, 49, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+& .header__menu-link {
+  font-family: "Rubik Dirt", system-ui;
+  font-size: 1rem;
+  color: var(--main-bg-color) !important;
+  letter-spacing: 1px;
+  padding: 0.75rem 1.5rem !important;
+  border-left: 3px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+
+  &:hover {
+    color: var(--accent-yellow) !important;
+    border-left-color: var(--accent-yellow);
+    background: rgba(230, 207, 57, 0.07);
+  }
 }

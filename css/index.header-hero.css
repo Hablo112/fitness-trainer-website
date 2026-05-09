@@ -62,6 +62,7 @@
     letter-spacing: 1px;
     padding-top: 150px;
     margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-in 0.6s forwards;
   }
 
   & .hero__button {
@@ -83,6 +84,10 @@
     system-ui;
   letter-spacing: 3px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-in;
+}
+.blue {
+  animation: fadeInUp 1s ease-in 0.3s forwards;
 }
 
 & .navbar {

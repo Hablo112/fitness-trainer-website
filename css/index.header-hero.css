@@ -47,8 +47,7 @@
 
   & .hero__title {
     font:
-      normal 300 2rem "Rubik Dirt",
-      system-ui;
+      normal 300 1.5rem var(--font-heading);
     color: var(--main-bg-color);
     letter-spacing: 2px;
     margin-bottom: 6rem;
@@ -56,32 +55,67 @@
 
   & .hero__subtitle {
     font:
-      normal 300 1rem "Rubik Dirt",
-      system-ui;
+      normal 300 1rem var(--font-heading);
     color: var(--main-bg-color);
     letter-spacing: 1px;
     padding-top: 150px;
     margin-bottom: 2rem;
-    animation: fadeInUp 1s ease-in 0.6s forwards;
   }
 
   & .hero__button {
     font:
-      normal 200 1rem "Rubik Dirt",
-      system-ui;
+      normal 400 1rem var(--font-heading);
     background-color: var(--accent-yellow);
-    color: var(--secondary-accent-color);
+    color: var(--button-text-color);
     margin-top: 1rem;
     border: none;
     cursor: pointer;
+    font-size: 25px;
+    
   }
+
+  /* Послідовна поява span у .hero__title з псевдоелементами */
+  & .hero__title span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    /* основна анімація появи, затримка через кастомну властивість */
+    animation: hero-appear .45s cubic-bezier(.2,.8,.2,1) forwards;
+    animation-delay: var(--delay, 0s);
+  }
+
+  & .hero__title span::after {
+    content: "";
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    margin-left: .5rem;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(.6);
+    vertical-align: middle;
+    /* окрема анімація для "крапки" з додатковою затримкою */
+    animation: dot-pop .35s ease forwards;
+    animation-delay: calc(var(--delay, 0s) + .12s);
+  }
+
+  /* & .hero__title span.yellow::after { background: var(--accent-yellow); }
+  & .hero__title span.blue::after   { background: #4aa3ff; }
+  & .hero__title span.green::after  { background: #7bd389; } */
+
+  /* Налаштування поетапних затримок для кожного span через кастомну властивість */
+  & .hero__title span:nth-of-type(1){ --delay: .12s; }
+  & .hero__title span:nth-of-type(2){ --delay: .52s; }
+  & .hero__title span:nth-of-type(3){ --delay: .92s; }
 }
+
+@keyframes hero-appear { to { opacity: 1; transform: translateY(0); } }
+@keyframes dot-pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: scale(1); } }
 
 .yellow {
   color: var(--accent-yellow);
   font:
-    600 3rem "Chela One",
-    system-ui;
+    600 2.5rem var(--font-heading);
   letter-spacing: 3px;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   animation: fadeInUp 1s ease-in;

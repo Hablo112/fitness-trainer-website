@@ -8,7 +8,9 @@ The project focuses on clean design, responsive layout and user-friendly navigat
 
 ## 📷 Preview
 
-> Add screenshots here
+<p align="center">
+  <img src="assets/demo.gif" width="900">
+</p>
 
 Home Page
 
